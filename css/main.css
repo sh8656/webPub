@@ -113,12 +113,23 @@ nav .gnb a.active{
 /* intro */
 #intro{
     position: relative;
+    background: url("../img/back.png");
+    background-size: cover;
+    background-position: center center;
 }
 #intro .title{
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
 }
+.introName{
+    color: #4f83c2;
+    position: absolute;
+    top:40%; left:39%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
 /* intro-end */
 
 /* profile */
