@@ -122,7 +122,7 @@ nav .gnb a.active{
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
 }
-.introName{
+.introName {
     color: #4f83c2;
     position: absolute;
     top:40%; left:39%;
