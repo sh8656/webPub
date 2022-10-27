@@ -1,0 +1,164 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+#wrap{
+    width: 1000px; margin: 0 auto;
+    position: relative;
+}
+img{
+    max-width: 100%;
+}
+
+.title.on{
+    position: absolute;
+    width: 654px;
+    height: 448px;
+    left: 110px;
+    top: 763px;
+    transition: .6s;
+    transition-delay: .5s;
+    opacity: 1;
+}
+.title{
+    position: absolute;
+    width: 654px;
+    height: 448px;
+    left: 210px;
+    top: 763px;
+    opacity: 0;
+}
+
+.m1{
+    position: absolute;
+    width: 800px;
+    height: 180px;
+    left: 110px;
+    top: 1306px;
+}
+.m2{
+    position: absolute;
+    width: 800px;
+    height: 180px;
+    left: 110px;
+    top: 1510px;
+}
+.m3{
+    position: absolute;
+    width: 800px;
+    height: 180px;
+    left: 110px;
+    top: 1714px;
+}
+.m4{
+    position: absolute;
+    width: 800px;
+    height: 180px;
+    left: 110px;
+    top: 1918px;    
+}
+
+.menu.on{
+    transform: translateX(0);
+    transition: .6s;
+    opacity: 1;
+}
+.menu{
+    transform: translatex(100px);
+    opacity: 0;
+}
+.menu.on.m1{transition-delay: 1.2s;}
+.menu.on.m2{transition-delay: 1.4s;}
+.menu.on.m3{transition-delay: 1.6s;}
+.menu.on.m4{transition-delay: 1.8s;}
+
+
+
+.model1.on{
+    position: absolute;
+    width: 383px;
+    height: 563px;
+    left: 107px;
+    top: 2453px;
+    transition: .6s;
+    opacity: 1;
+}
+.model1{
+    position: absolute;
+    width: 383px;
+    height: 563px;
+    left: -107px;
+    top: 2453px;
+    opacity: 0;
+}
+.model2.on{
+    position: absolute;
+    width: 383px;
+    height: 563px;
+    left: 522px;
+    top: 2453px;
+    transition: .6s;
+    opacity: 1;
+}
+.model2{
+    position: absolute;
+    width: 383px;
+    height: 563px;
+    left: 722px;
+    top: 2453px;
+    opacity: 0;
+}
+
+
+
+.heart1{
+    position: absolute;
+    width: 140px;
+    height: 48px;
+    left: 80px;
+    top: 2579px;
+}
+.heart2{
+    position: absolute;
+    width: 140px;
+    height: 48px;
+    left: 452px;
+    top: 2530px;
+}
+.heart3{
+    position: absolute;
+    width: 140px;
+    height: 48px;
+    left: 376px;
+    top: 2735px;
+}
+.heart4{
+    position: absolute;
+    width: 140px;
+    height: 48px;
+    left: 820px;
+    top: 2650px;
+}
+.heart.on{
+    transform: translateY(0);
+    transition: .6s;
+    opacity: 1;
+}
+.heart{
+    transform: translateY(20px);
+    opacity: 0;
+}
+.heart.on.heart1{transition-delay: .6s;}
+.heart.on.heart2{transition-delay: .8s;}
+.heart.on.heart3{transition-delay: 1s;}
+.heart.on.heart4{transition-delay: 1.2s;}
+
+.an1{
+    position: absolute;
+    animation: updown 3s infinite;
+}
+@keyframes updown{
+    0%{transform: translate(100px,-100px); opacity: 0;}
+    20%{transform: translate(0,0); opacity: 1;}
+    60%{transform: translate(0,0); opacity: 1;}
+    80%{transform: translate(-50px,-50px); opacity: 0;}
+    100%{transform: translate(-50px,-50px); opacity: 0;}
+}

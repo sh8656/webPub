@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ria_event</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <img src="img/an01.png" alt="" class="an1">
+
+        <img src="img/background.png" alt="배경이미지">
+        <img src="img/title.png" alt="타이틀이미지" class="title">
+
+        <img src="img/01.png" alt="" class="menu m1">
+        <img src="img/02.png" alt="" class="menu m2">
+        <img src="img/03.png" alt="" class="menu m3">
+        <img src="img/04.png" alt="" class="menu m4">
+
+        <img src="img/model1.png" alt="" class="model1">
+        <img src="img/model2.png" alt="" class="model2">
+
+        <img src="img/heart1.png" alt="" class="heart heart1">
+        <img src="img/heart2.png" alt="" class="heart heart2">
+        <img src="img/heart3.png" alt="" class="heart heart3">
+        <img src="img/heart4.png" alt="" class="heart heart4">
+    </div>
+
+    <script>
+        window.addEventListener("load", ani);
+        window.addEventListener("scroll", scr);        
+
+        function ani(){
+            $(".title").addClass("on")
+            $(".menu").addClass("on")
+        }
+
+        function scr(){
+            console.log(scrollY);
+            if(scrollY > 2000){
+                $(".model1").addClass("on");
+                $(".model2").addClass("on");
+                $(".heart").addClass("on");
+            }else{
+                $(".model1").removeClass("on");
+                $(".model2").removeClass("on");
+                $(".heart").removeClass("on");
+            }
+        }
+
+    </script>
+</body>
+</html>

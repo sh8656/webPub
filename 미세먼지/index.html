@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목포 미세먼지</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+        *{margin: 0; padding: 0;}
+        #mise{
+            width: 390px; height: 844px;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            /* background: #ffa; */
+            padding: 80px 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #mise > div{
+            outline: 5px #fff solid;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+        .icon{
+            font-size: 10rem;
+            display: flex;
+            justify-content: center;
+            color: #fff;
+            /* color: rgba(107, 239, 224, 0.6); */
+        }
+        body{
+            height: 100vh;
+            background: url('https://cdn.pixabay.com/photo/2016/11/19/17/56/clouds-1840568_960_720.jpg');
+            background-size: cover;
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <div id="mise">
+        <div class="pm25"></div><!-- pm2.5 (초미세먼지) -->
+        <div class="pm10"></div><!-- pm10 (미세먼지) -->
+        
+    </div>
+
+    <script>
+        // 좋음 : #2e75b6 보통 : #70ad47 나쁨 : #ffc00 매우나쁨 : #ed7d31
+        //목포 34.794 126.389
+        //https://api.openweathermap.org/data/2.5/air_pollution?lat=34.794&lon=126.389&appid=02a146d88b51a0a88235d8a46514d112
+
+        $.getJSON('https://api.openweathermap.org/data/2.5/air_pollution?lat=34.794&lon=126.389&appid=02a146d88b51a0a88235d8a46514d112', miseTodey);
+
+        function miseTodey(data){
+            console.log(data);
+            let pm25 = data.list[0].components.pm2_5;
+            let pm10 = data.list[0].components.pm10;
+            let pm25_text, pm10_text;
+            let pm25_color, pm10_color;
+
+            if(pm25 < 16){
+                pm25_text = "<div class='icon xi-emoticon-smiley-o'></div>";
+                pm25_color = "#2e75b6";
+            }else if(pm25 < 36){
+                pm25_text = "<div class='icon xi-emoticon-neutral-o'></div>";
+                pm25_color = "#70ad47";
+            }else if(pm25 < 76){
+                pm25_text = "<div class='icon xi-emoticon-sad-o'></div>";
+                pm25_color = "#ffc00";
+            }else{
+                pm25_text = "<div class='icon xi-emoticon-devil-o'></div>";
+                pm25_color = "#ed7d31";
+            }
+
+            if(pm10 < 31){
+                pm10_text = "<div class='icon xi-emoticon-smiley-o'></div>";
+                pm10_color = "#2e75b6";
+            }else if(pm10 < 81){
+                pm10_text = "<div class='icon xi-emoticon-neutral-o'></div>";
+                pm10_color = "#70ad47";
+            }else if(pm10 < 151){
+                pm10_text = "<div class='icon xi-emoticon-sad-o'></div>";
+                pm10_color = "#ffc00";
+            }else{
+                pm10_text = "<div class='icon xi-emoticon-devil-o'></div>";
+                pm10_color = "#ed7d31";
+            }
+
+            $('.pm25').html("초미세먼지 : "+ pm25 + "<br>" + pm25_text);
+            $('.pm10').html("미세먼지 : "+ pm10 + "<br>" + pm10_text);
+            $('.pm25').css("background", pm25_color);
+            $('.pm10').css("background", pm10_color);
+
+        }    
+    </script>
+</body>
+</html>
