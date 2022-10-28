@@ -233,12 +233,22 @@ section.on .mockup{
     background-size: cover;
     background-position: center center;
 }
+#work04 .mockup{
+    background: url("../img/work04_mockup.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+/* #work05 .mockup{
+    background: url("../img/work05_mockup.jpg");
+    background-size: cover;
+    background-position: center center;
+} */
 
 /* menu */
 .menu{
     position: fixed;
     display: flex;
-    bottom:40px;
+    bottom:20px;
     left:50%;
     transform: translateX(-50%);
     z-index: 9999;
@@ -246,14 +256,14 @@ section.on .mockup{
 .menu a{
     width:24px;
     height:24px;
-    background:#333;
+    background:#98A6B8;
     border-radius: 12px;
     margin: 24px;
     transition: .3s;
 }
 .menu a.on{
-    background:#ccc;
-    outline: 3px solid #333;
+    background:#FFF;
+    outline: 3px solid #98A6B8;
 }
 /* menu end */
 
@@ -295,7 +305,7 @@ section.on .mockup{
 /* profile darkMode btn end */
 
 /* profile 사선이동 배경 */
-#profile{
+/* #profile{
     overflow: hidden;
     background: none;
 }
@@ -331,5 +341,5 @@ section.on .mockup{
 }
 #profile.on .bg-box2{
     transform: rotate(15deg);
-}
+} */
 /* profile 사선이동 배경 end */
