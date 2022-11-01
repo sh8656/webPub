@@ -198,7 +198,9 @@ header{
     75%{margin-left: -300%;}
     100%{margin-left: -400%;}
 }
-
+.eventSlide img{
+    width: 100%;
+}
 /* intro */
 .intro li{
     position: relative;
@@ -515,6 +517,83 @@ footer div:nth-child(3){
     font-size: 1.5rem;
 }
 
+/* 햄버거 */
+.burger{
+    width:30px; height:30px;
+    position: absolute;
+    top:70px; left: 40px;
+    transform: translateY(-50%);
+    right: 10%;
+    display: none;
+}
+
+.bar{
+    position: absolute;
+    width:30px;
+    height:6px;
+    background: #f00;
+    transition: .3s;
+}
+.burger.active .bar:nth-child(1){
+    opacity: 0;
+}
+.burger.active .bar:nth-child(2){
+    top:12px;
+    transform: rotate(45deg);
+}
+.burger.active .bar:nth-child(3){
+    top:12px;
+    transform: rotate(-45deg);
+}
+.burger.active .bar:nth-child(4){
+    top:24px;
+    opacity: 0;
+}
+
+.burger .bar:nth-child(1){
+    opacity: 1;
+}
+.burger .bar:nth-child(2){
+    top:12px;
+    transform: rotate(0deg);
+}
+.burger .bar:nth-child(3){
+    top:12px;
+    transform: rotate(0deg);
+}
+.burger .bar:nth-child(4){
+    top:24px;
+    opacity: 1;
+}
+
+.popup_nav{
+    display: none;
+    position: absolute;
+    width:100%;
+    left:-150%;
+    background:rgb(218, 45, 45);
+    color:#fff;
+    transition: .3s;  
+    z-index: 9999999999999; 
+}
+.popup_nav.active{
+    left: 0;
+}
+.popup_nav a{
+    padding-left: 20px;
+    line-height: 40px;
+}
+.popup_nav li:hover{
+    background: rgba(187, 141, 141, 0.6);    
+}
+.popup_gnb a{
+    color: #fff;
+    line-height: 50px;
+}
+.popup_gnb li{
+    padding-left: 20px;
+}
+
 /* resposive */
 @media screen and (max-width:720px){
     nav{display: none;}
@@ -527,4 +606,6 @@ footer div:nth-child(3){
     .imgbox a .text{
         top: 0;
     }
+    .burger{display:block;}
+    .popup_nav{display: block;}
 }

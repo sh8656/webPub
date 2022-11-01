@@ -238,11 +238,11 @@ section.on .mockup{
     background-size: cover;
     background-position: center center;
 }
-/* #work05 .mockup{
+#work05 .mockup{
     background: url("../img/work05_mockup.jpg");
     background-size: cover;
     background-position: center center;
-} */
+}
 
 /* menu */
 .menu{

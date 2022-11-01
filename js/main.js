@@ -12,13 +12,13 @@ var count = 0;
 
 function go(e){
     count++;
-    var goCount = count%5;
+    var goCount = count%6;
     if(e.wheelDelta < 0){
-        if(goCount == 4 && sectionCounter < 5){
+        if(goCount == 5 && sectionCounter < 6){
             sectionCounter++;
         }
     }else{
-        if(goCount == 4 && sectionCounter > 0){
+        if(goCount == 5 && sectionCounter > 0){
             sectionCounter--;
         }
     }

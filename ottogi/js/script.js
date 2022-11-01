@@ -23,6 +23,13 @@ $(".tab li:eq(2) a").click(
     }
 );
 
+$(".burger").click(
+    function(){
+        $(this).toggleClass("active");
+        $(".popup_nav").toggleClass("active");
+    }
+);
+
 /* slick */
 $('.main-slide').slick({
     dots:true,
