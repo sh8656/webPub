@@ -4,10 +4,10 @@
 
 /* root */
 :root{
-    --btn-bg:#222;
+    --btn-bg:#B4C4D9;
     --btn-color:#fff;
-    --cir-bg:#ccc;
-    --light-btn-bg:#69f;
+    --cir-bg:#fff;
+    --light-btn-bg:#10151D;
     --profile_bg:#fff url("../img/profile.png") no-repeat;
 }
 /* root-end */
@@ -37,23 +37,23 @@ section{
 }
 
 /* burger */
-.burger{width:40px; height:40px; cursor: pointer;
+.burger{width:30px; height:30px; cursor: pointer;
     position: fixed;
     top:40px; right:40px;
     z-index: 9999999;
 }
 .burger .bar{
-    width:40px; height:8px;
-    background:#ccc;
+    width:30px; height:6px;
+    background:#B4C4D9;
     position: absolute;
     transition: .3s;
 }
 .burger .bar:nth-child(2), 
 .burger .bar:nth-child(3){
-    top:16px;
+    top:12px;
 }
 .burger .bar:nth-child(4){
-    top:32px;
+    top:24px;
 }
 
 .burger.on .bar:nth-child(1), 
@@ -102,32 +102,22 @@ nav .gnb a{
 }
 
 nav .gnb a:hover{
-    background:#69f;
+    background:#B4C4D9;
+    color: #10151D;
 }
 
 nav .gnb a.active{
-    background:#ccc;
+    background:#CEDEF2;
+    color: #10151D;
 }
 /* nav-end */
 
 /* intro */
 #intro{
     position: relative;
-    background: url("../img/back.png");
+    background: url("../img/introbg.png");
     background-size: cover;
     background-position: center center;
-}
-#intro .title{
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-}
-.introName {
-    color: #4f83c2;
-    position: absolute;
-    top:40%; left:39%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
 }
 
 /* intro-end   */
@@ -254,11 +244,11 @@ section.on .mockup{
     z-index: 9999;
 }
 .menu a{
-    width:24px;
-    height:24px;
+    width:10px;
+    height:10px;
     background:#98A6B8;
     border-radius: 12px;
-    margin: 24px;
+    margin: 5px;
     transition: .3s;
 }
 .menu a.on{
@@ -273,7 +263,7 @@ section.on .mockup{
     border-radius: 20px;
     background:var(--btn-bg);
     position: absolute;
-    top:20px; left:40px;
+    top:40px; left:40px;
     z-index: 9999999990;
 }
 .btn.active{

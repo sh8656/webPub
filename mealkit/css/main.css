@@ -1,0 +1,238 @@
+.bx-wrapper{
+    border: 0;
+    margin: 0;
+}
+.bx-wrapper .bx-pager{
+    text-align: right;
+    bottom: 15px;
+}
+.bx-viewport img{
+    width: 100%;
+}
+.bx-wrapper::after{
+    content:"";/* after나before속성 사용시 content 꼭 사용해줘야함 */
+    display: block;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    top: 0; left: 0;
+}
+footer{
+    padding-left: 5%;
+    line-height: 60px;
+    color: #fff;
+    background: #15181d;
+    border-top: 1px #ddd solid;
+}
+header{
+    position: fixed;
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+    z-index: 10;
+    top: 0; left: 0;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    line-height: 80px;
+    font-size: 1.2rem;
+    font-family: 'Caveat', cursive;
+}
+header.on{
+    background: #15181d74;
+}
+.gnb{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+.gnb a:hover{
+    color: #dfc04d;
+}
+
+.slide_title{
+    position: absolute;
+    top: 60%; left: 5%;
+    color: #fff;
+}
+.slide_title h3{
+    font-size: 1.8rem;
+    font-weight: lighter;
+    font-family: 'Caveat', cursive;
+}
+.slide_title h1{
+    font-size: 6rem;
+    padding: 10px 0 20px 0;
+    color: #dfc04d;
+    font-family: 'Caveat', cursive;
+}
+.slide_title p{
+    color: #ddd;
+}
+
+/* #contents */
+#contents{
+    background: #15181d;
+    padding: 100px 0 50px 0;
+} 
+
+#contents h3{
+    text-align: center;
+    line-height: 30px;
+    color: #dfc04d;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+}
+#contents h1{
+    text-align: center;
+    line-height: 70px;
+    font-size: 2rem;
+    color: #fff;
+    margin: 15px 0;
+    
+}
+#contents ul{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+}
+#contents ul li{
+    width: 50%;
+}
+#contents img{
+    width: 100%;
+}
+.reText{
+    color: #ddd;
+    text-align: center;
+    margin-top: 100px;
+}
+.reText h2{
+    margin-bottom: 10px;
+}
+
+/* menu */
+#menu {
+    background: url("..//img/menubg.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 100px;
+}
+#menu h3{
+    text-align: center;
+    line-height: 30px;
+    color: #dfc04d;
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+}
+#menu h1{
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 30px 0;
+    font-weight: lighter;
+}
+#menu ul{
+    width: 70%;
+    margin: 0 auto;
+    color: #ddd;
+    display: flex;
+    flex-wrap: wrap;
+}
+#menu li{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 50px 0 50px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    line-height: 150px;
+}
+#menu span{
+    margin: 20px;
+    box-sizing: border-box;
+    line-height: 50px;
+}
+#menu span:nth-child(odd){
+    font-weight: bold;
+}
+
+/* gallery */
+#gallery{
+    background: #15181d;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 100px;
+}
+#gallery ul{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+#gallery li{
+    width: calc(90% / 3);
+    margin-bottom: 20px;
+    position: relative;
+}
+#gallery img{
+    width: 100%;
+}
+.overTxt{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
+    opacity: 1; 
+    top:100%;
+    transition: .3s;
+    display: none;
+}
+.overTxt div{
+    text-align: center;
+    position: absolute;
+    top:50%;
+    width:100%;
+    color:#fff;
+}
+#gallery a:hover .overTxt{
+    top:0;
+    display: block;
+}
+
+
+
+/* contact */
+#contact {
+    background: #15181d;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 200px;
+}
+
+#contact ul{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+}
+#contact li{
+    width: 50%;
+}
+.contact_text h3{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.contact_text p{
+    margin-bottom: 50px;
+    color: #ddd;
+}
+
+@media screen and (max-width:428px){
+    
+}
